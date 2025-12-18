@@ -1,5 +1,3 @@
-@import '../fonts/fonts.css';
-
 .page {
   background-image: var(--page-bg-image);
   background-position: center center;
@@ -13,6 +11,7 @@
   height: 100vh;
   min-height: 668px;
   display: grid;
+  align-items: center;
   padding: 10px; /*для мобилок*/
   margin-bottom: 40px; /*для мобилок*/
 }
@@ -47,6 +46,8 @@
 :root:is(.theme-light) .rec-badge {
   display: none;
 }
+
+
 
 .angles {
   position: relative;
@@ -83,7 +84,9 @@
   flex-direction: column;
   gap: 10px;
   justify-self: end; /*для мобилок и планшетов*/ 
-  margin-top: 65px; /*для мобилок*/
+  margin-top: 35px; /*для мобилок*/
+  padding-bottom: 10px;
+  
 }
 
 .header__theme-menu-button {
@@ -101,7 +104,16 @@
   padding-left: 13px;
   padding-right: 13px;
   text-align: center;
-  
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-decor-color);
+}
+
+.header__theme-menu-button:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--decor-color);
 }
 
 .header__theme-menu-button_active {
@@ -110,15 +122,16 @@
 
 .title {
   align-self: center;
-  width: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /*для мобилок*/
   color: var(--title-color);
   font-family: 'IBM Plex mono', monospace;
   font-weight: 700;
   font-style: normal;
-  font-size: 116px; /*для мобилок*/
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /*для мобилок*/
   line-height: 83%;
   letter-spacing: 0%;
   text-shadow: 4px 4px 0 var(--accent-color);
+  
+  
 }
 
 .title-decor {
@@ -129,11 +142,12 @@
   line-height: 23.4px;
   letter-spacing: 0%;
   background-color: var(--accent-color);
-  align-self: start;
+  align-self: flex-start;
   color: var(--decor-title-color);
   margin-top: 20px; 
   width: 100%;
 }
+
 .not_bold {
   font-weight: 400;
 }
@@ -176,10 +190,25 @@
   margin-top: 10px;
 }
 
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:focus {
+  text-decoration: none;
+  outline: none;
+  border: 1px solid var(--text-color);
+}
+
 .section_gallery {
   padding-left: 10px; /*для мобилок*/
   padding-right: 10px; /*для мобилок*/
-  margin-bottom: 40px; /*для мобилок*/
+  margin-bottom: 35px; /*для мобилок*/
   display: block;
 }
 
@@ -190,7 +219,6 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /*для мобилок*/
-  width: 355px; /*для мобилок*/
   gap: 10px;  /*для мобилок*/
 }
 
@@ -202,7 +230,6 @@
 
 .footer {
   display: flex; 
-  width: 100vw;
   height: 100vh;
   min-height: 668px;
   align-items: center;
@@ -215,8 +242,9 @@
 
 @media (width >= 768px) {
   .header {
+    align-items: baseline;
     padding: 0px; 
-    margin-bottom: 60px; 
+    margin-bottom: 40px; 
     padding-right: 20px;
   }
 
@@ -240,13 +268,18 @@
   }
 
   .title {
+    margin-top: 55px;
     width: fit-content;
-    font-size: 120px; 
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
+    align-self: start;
   }
 
   .header .title-decor {
-    max-width: calc(50vw - 20px);
+    max-width: calc(50vw - 30px);
     justify-self: end;
+    align-self: start;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
 
   .section_main {
@@ -268,13 +301,13 @@
   }
 
   .section_title_alternative {
-    width: calc((100vw - 60px)/3);
+    width: calc((100vw - 80px)/3);
   }
 
   .section_gallery {
     padding-left: 20px; 
     padding-right: 20px;
-    margin-bottom: 60px; 
+    margin-bottom: 50px; 
   }
 
   .gallery-title {
@@ -312,25 +345,54 @@
     grid-area: street;
   }
 
+  .footer_title {
+    margin-top: 0;
+    align-self: center;
+  }
+
 }
 
 @media (width >= 1024px) {
+  .header {
+    align-items: baseline;
+  }
+
   .header__theme-menu-list {
     margin-top: 20px; 
     flex-direction: row;
     gap: 10px;
     justify-self: center;  
+    align-self: start;
+    margin-left: 21px;
   }
 
+
   .title {
+    margin-top: 63px;
+    margin-bottom: 27px;
     width: fit-content;
-    font-size: 157px; 
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
+  }
+
+  .title-decor {
+    align-self: start;
   }
 
   .section_main_content_altenative {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+  }
+  .footer_title {
+    width: fit-content;
+    padding-bottom: 33px;
+  }
+}
+
+
+@media (width <=390px){
+  body {
+    overflow-x: hidden;  
   }
 }
 

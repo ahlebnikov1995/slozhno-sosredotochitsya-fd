@@ -1,9 +1,10 @@
 :root {
   --page-bg-image: url('/images/cover-image-dark.png');
-  --page-bg-color: #000532;
-  --title-color: #DB00FF;
-  --accent-color: #FF0070;
-  --decor-title-color:#000028;
-  --decor-color: #FF0070;
-  --text-color: #F1B2CE;
+ --page-bg-color: #000532;
+ --title-color: #DB00FF;
+ --accent-color: #FF0070;
+ --hover-decor-color:#FF007066;
+ --decor-title-color:#000028;
+ --decor-color: #FF0070;
+ --text-color: #F1B2CE;
 }

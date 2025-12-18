@@ -6,17 +6,16 @@
   box-sizing: border-box;
 }
 
-html::-webkit-scrollbar {
-  display: none; /* Полное скрытие */
-  width: 0;
-  height: 0;
-}
+
 
 body {
   scrollbar-width: none;
   min-inline-size: 375px;
   max-inline-size: 1440px;
-  margin: 0 auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0 auto; 
+
 }
 
 h1,
