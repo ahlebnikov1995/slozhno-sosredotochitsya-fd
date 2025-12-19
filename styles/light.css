@@ -1,6 +1,6 @@
 
 :root.theme-light {
- --page-bg-image: url('/images/cover-image-light.png');
+ --page-bg-image: url('../images/cover-image-light.png');
  --page-bg-color: #FFEEF6;
  --title-color: #FFC2E6;
  --accent-color: #FF8DCB;
@@ -12,7 +12,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --page-bg-image: url('/images/cover-image-light.png');
+    --page-bg-image: url('../images/cover-image-light.png');
     --page-bg-color: #FFEEF6;
     --title-color: #FFC2E6;
     --accent-color: #FF8DCB;

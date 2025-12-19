@@ -218,7 +218,7 @@
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /*для мобилок*/
+  grid-template-columns: 1fr; /*для мобилок*/
   gap: 10px;  /*для мобилок*/
 }
 
@@ -368,14 +368,15 @@
 
 
   .title {
-    margin-top: 63px;
-    margin-bottom: 27px;
+    margin-top: 91px;
+    margin-bottom: 56px;
+    align-self: center;
     width: fit-content;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
   }
 
   .title-decor {
-    align-self: start;
+    align-self: center;
   }
 
   .section_main_content_altenative {
@@ -389,12 +390,6 @@
   }
 }
 
-
-@media (width <=390px){
-  body {
-    overflow-x: hidden;  
-  }
-}
 
 
 
