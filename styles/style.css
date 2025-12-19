@@ -208,7 +208,7 @@
 .section_gallery {
   padding-left: 10px; /*для мобилок*/
   padding-right: 10px; /*для мобилок*/
-  margin-bottom: 35px; /*для мобилок*/
+  margin-bottom: 40px; /*для мобилок*/
   display: block;
 }
 
@@ -268,14 +268,13 @@
   }
 
   .title {
-    margin-top: 55px;
     width: fit-content;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
     align-self: start;
   }
 
   .header .title-decor {
-    max-width: calc(50vw - 30px);
+    max-width: calc(50vw - 20px); /*поправил отображение на десктопе и плашете, а телефонная версия у меня с макетом совпадает, перепроверьте её пожалуйста*/
     justify-self: end;
     align-self: start;
     margin-top: 0px;
@@ -307,7 +306,7 @@
   .section_gallery {
     padding-left: 20px; 
     padding-right: 20px;
-    margin-bottom: 50px; 
+    margin-bottom: 56px; 
   }
 
   .gallery-title {
@@ -346,7 +345,7 @@
   }
 
   .footer_title {
-    margin-top: 0;
+    margin-top: 0px;
     align-self: center;
   }
 
@@ -366,6 +365,9 @@
     margin-left: 21px;
   }
 
+  .section_main { 
+    gap: 10px;
+  }
 
   .title {
     margin-top: 91px;
@@ -378,16 +380,20 @@
   .title-decor {
     align-self: center;
   }
-
   .section_main_content_altenative {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   }
+  .section_gallery {
+    margin-bottom: 50px; 
+  }
   .footer_title {
     width: fit-content;
     padding-bottom: 33px;
   }
+  
+
 }
 
 
